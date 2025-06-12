@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Te amo 💙</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fffafa;
+      text-align: center;
+      padding: 50px;
+    }
+    button {
+      padding: 15px 25px;
+      font-size: 20px;
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .hidden {
+      display: none;
+    }
+    .image-block {
+      margin-top: 30px;
+    }
+    .image-block img {
+      width: 300px;
+      max-width: 90%;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      margin-bottom: 10px;
+    }
+    .image-block p {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Clique abaixo para saber o motivo de eu te amar</h1>
+  <button onclick="mostrarImagens()">Clique aqui 💙</button>
+
+  <div id="imagem1" class="image-block hidden">
+    <img src="Primeira.jpg" alt="Café e pão de queijo">
+    <p>Pq como não se apaixonar por quem te dá café e pão de queijo?</p>
+  </div>
+
+  <div id="resto" class="hidden">
+    <div class="image-block">
+      <img src="segunda.webp" alt="Foto carinhosa">
+      <p>Porque em você encontrei paz, carinho e o amor que sempre procurei.</p>
+    </div>
+    <div class="image-block">
+      <img src="terceira.jpg" alt="Nós dois">
+      <p>Frase da terceira imagem 💌</p>
+    </div>
+  </div>
+
+  <script>
+    function mostrarImagens() {
+      document.querySelector("button").style.display = "none";
+      document.getElementById("imagem1").classList.remove("hidden");
+
+      setTimeout(() => {
+        document.getElementById("resto").classList.remove("hidden");
+      }, 10000); // 10 segundos
+    }
+  </script>
+</body>
+</html>
