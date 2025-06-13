@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Final</title>
+  <style>
+    body {
+      background-color: #fdf0f5;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+    img {
+      margin-top: 50px;
+      width: 60%;
+      border-radius: 20px;
+    }
+    p {
+      font-size: 30px;
+      color: #dc143c;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .falling-heart {
+      position: fixed;
+      top: -30px;
+      font-size: 30px;
+      color: red;
+      animation: fall 4s linear forwards;
+      z-index: 9999;
+    }
+    @keyframes fall {
+      to {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <img src="terceira.jpg" alt="Imagem final">
+  <p>TE AMO MUITO</p>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      setInterval(() => {
+        const heart = document.createElement('div');
+        heart.className = 'falling-heart';
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.innerText = '❤️';
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 4000);
+      }, 400);
+    });
+  </script>
+</body>
+</html>
